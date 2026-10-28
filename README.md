@@ -23,10 +23,15 @@
 
 ## 動かし方
 
-ビルド不要の1ファイル（`index.html`）です。ブラウザで直接開くか、静的ホスティング（Cloudflare Pages など）にそのまま置けます。
+TypeScript + Vite で作っています。
 
 ```sh
-npx serve .   # 任意。ローカルで配信する場合
+npm install
+npm run dev      # 開発サーバー（http://localhost:5173）
+npm run build    # 型チェックと本番ビルド（dist/ に出力）
+npm run lint     # oxlint
 ```
+
+`dist/` は静的ファイルだけなので、Cloudflare Pages などにそのまま置けます（ビルドコマンド `npm run build`、出力ディレクトリ `dist`）。
 
 ゲーム中の登場人物・ドメインはすべて架空のものです。
